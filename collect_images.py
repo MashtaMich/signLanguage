@@ -54,7 +54,7 @@ def get_hand_roi(img):
     return roi, bbox
 
 def store_images(g_id):
-    total_pics = 200
+    total_pics = 400
     cam = cv2.VideoCapture(1)
     # Fallback to camera 0 if camera 1 is not available
     if not cam.read()[0]:
@@ -62,7 +62,7 @@ def store_images(g_id):
     # Create folder to save images for this gesture under "dataset"
     folder_path = os.path.join("dataset", str(g_id))
     create_folder(folder_path)
-    pic_no = 0
+    pic_no = 200
     flag_start_capturing = False
     frames = 0
 
